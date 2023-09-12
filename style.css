@@ -1,0 +1,102 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 10%; /* Adjust the width of the line as needed */
+  height: 100%;
+  background-color: #bfbfbf; /* Adjust the color of the line as needed */
+}
+
+.container {
+  max-width: 600px; /* Increase the max-width for larger screens */
+  margin: 0 auto;
+  background-color: #ffffff67;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 100;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.result {
+  overflow: hidden;
+  max-width: 250px;
+  height: 30px;
+  font-size: 26px;
+  margin-bottom: 20px;
+  background-color: #eeeeeeb1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.key {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #bababa;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* Add a smooth transition */
+}
+
+#clear {
+  grid-column: span 2;
+}
+
+.key:hover {
+  background-color: #8a8a8a; /* Change color on hover */
+}
+
+.key:active {
+  background-color: #ffffff; /* Change color when clicked */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 20%; /* Adjust the width of the line as needed */
+    height: 100%;
+    background-color: #bfbfbf; /* Adjust the color of the line as needed */
+  }
+  .container {
+    max-width: 90%;
+  }
+
+  .result {
+    max-width: 250px;
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .key {
+    font-size: 20px;
+  }
+}
