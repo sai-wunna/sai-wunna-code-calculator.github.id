@@ -15,8 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
       resultBox.textContent = ''
     }
     if (e.target.id === 'ans') {
-      currentValue = eval(currentValue).toFixed(2).toString()
-      resultBox.textContent = currentValue
+      if (currentValue.length === 0) return
+      try {
+        currentValue = eval(currentValue).toFixed(2).toString()
+        resultBox.textContent = currentValue
+        console.log(currentValue)
+      } catch (error) {
+        resultBox.textContent = 'e'
+        currentValue = ''
+      }
     }
     if (e.target.id === 'del') {
       currentValue = currentValue.slice(0, -1)
