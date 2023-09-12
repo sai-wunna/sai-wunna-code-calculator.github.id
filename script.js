@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.target.id === 'ans') {
       currentValue = eval(currentValue).toFixed(2).toString()
       resultBox.textContent = currentValue
-      console.log(currentValue)
     }
     if (e.target.id === 'del') {
       currentValue = currentValue.slice(0, -1)
