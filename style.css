@@ -29,7 +29,7 @@ body:before {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  z-index: 100
+  z-index: 100;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
